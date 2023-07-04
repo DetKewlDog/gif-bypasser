@@ -1,5 +1,5 @@
-/http://tenor.com/view/*    :splat    301!
-/https://tenor.com/view/*    :splat    301!
+/http://tenor.com/view/*    http://tenor.com/view/:splat    301!
+/https://tenor.com/view/*    https://tenor.com/view/:splat    301!
 
-/http://media.discordapp.net/attachments/*    :splat    301!
-/https://media.discordapp.net/attachments/*    :splat    301!
+/http://media.discordapp.net/attachments/*    http://media.discordapp.net/attachments/:splat    301!
+/https://media.discordapp.net/attachments/*    https://media.discordapp.net/attachments/:splat    301!
