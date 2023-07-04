@@ -1,2 +1,2 @@
-/https://tenor.com/view/*    https://tenor.com/view/:splat    301
-/https://media.discordapp.net/attachments/*    https://media.discordapp.net/attachments/:splat    301
+/https://tenor.com/view/*    :splat    301
+/https://media.discordapp.net/attachments/*    :splat    301
