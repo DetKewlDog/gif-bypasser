@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')).render(
 	<Router>
 		<Routes>
 			{/* <Route path="/https://tenor.com/view/:param" element={<Tenor />} /> */}
-			<Route path="/https://media.discordapp.net/attachments/:param1/:param2/:param3" element={<Discord />} />
+			{/* <Route path="/https://media.discordapp.net/attachments/:param1/:param2/:param3" element={<Discord />} /> */}
 		</Routes>
 	</Router>
 );
