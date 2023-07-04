@@ -18,10 +18,10 @@ export function Tenor() {
 			fetchGif();
 	}, [param]);
 
-	return <img src={url} alt="GIF" />;
+	return <script>{window.location.href = url}</script>;
 }
 export function Discord() {
 	const { param1, param2, param3 } = useParams();
 	const url = `https://media.discordapp.net/attachments/${param1}/${param2}/${param3}`;
-	return <img src={url} alt="GIF" />;
+	return <script>{window.location.href = url}</script>;
 }
