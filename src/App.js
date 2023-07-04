@@ -1,24 +1,30 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { redirect, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 export function Tenor() {
-  	const [url, setUrl] = useState('');
 	const { param } = useParams();
+  	let [url, setUrl] = useState('');
 	useEffect(() => {
-			const fetchGif = async () => { // cors-anywhere.herokuapp.com is a CORS proxy
-				axios.get(`https://cors-anywhere.herokuapp.com/https://tenor.com/view/${param}`)
-				.then(response => {
-					const matches = response.data.match(/https:\/\/media\.tenor\.com\/[^/]+\/[^/]+\.gif/g);
-					setUrl(matches[0]);
-				}).catch(error => {
-					console.error('Error fetching GIF:', error);
-				});
-			};
-			fetchGif();
+		const fetchGif = async () => { // cors-anywhere.herokuapp.com is a CORS proxy
+			url = '';
+			axios.get(`https://cors-anywhere.herokuapp.com/https://tenor.com/view/${param}`)
+			.then(response => {
+				const matches = response.data.match(/https:\/\/media\.tenor\.com\/[^/]+\/[^/]+\.gif/g);
+				setUrl(matches[0]);
+			}).catch(error => {
+				console.log(error)
+				url = `https://tenor.com/view/${param}`;
+			});
+		};
+		fetchGif();
 	}, [param]);
 
-	return <script>{window.location.replace(url)}</script>;
+	const func = () => {
+		if (url !== '') window.location.replace(url);
+	}
+
+	return <script>{func()}</script>;
 }
 export function Discord() {
 	const { param1, param2, param3 } = useParams();
