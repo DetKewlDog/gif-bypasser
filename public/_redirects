@@ -1,1 +1,3 @@
 /*  /index.html  200
+/https://tenor.com/view/* https://tenor.com/view/:param:splat
+/https://media.discordapp.net/attachments/* https://media.discordapp.net/attachments/:splat
